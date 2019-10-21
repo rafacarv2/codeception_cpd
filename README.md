@@ -1,14 +1,16 @@
 # Codeception - Projeto básico
 ## Instalando o codeception
-1. Clonar este projeto
+1. Clonar este projeto onde seu servidor está instalado (exemplo para execução local: pasta "htdocs" no Xampp)
 ```
 git clone https://github.com/rafacarv2/codeception_cpd.git
 ```
-2. Baixar a versão mais recente do Composer
+2. Acessar a pasta do projeto
+
+3. Baixar a versão mais recente do Composer
 ```
 https://getcomposer.org/download/
 ```
-3. Instalar o codeception mais recente
+4. Instalar o codeception mais recente
 ```
 php composer.phar require "codeception/codeception" --dev
 ```
@@ -56,16 +58,22 @@ vendor/bin/codecept run --steps
 ```
 https://www.seleniumhq.org/download/
 ```
-2. Executar o Selenium Server
+2. Baixar o Chrome Driver
+```
+https://chromedriver.chromium.org/downloads
+```
+O arquivo chromedriver.exe deve estar na mesma pasta onde o Selenium Server está instalado.
+
+3. Executar o Selenium Server
 ```
 java -jar {Caminho do selenium server}
 ```
-3. Criar um caso de teste
+4. Criar um caso de teste
 ```
 vendor/bin/codecept generate:cest functional Funcional
 ```
 
-4. Alterar a configuração do teste funcional em **functional.suite.yml**
+5. Alterar a configuração do teste funcional em **functional.suite.yml**
 ```
 # tests/functional.suite.yml
 actor: FunctionalTester
@@ -76,7 +84,8 @@ modules:
             browser: chrome
         - \Helper\Functional
 ```
-5. Alterar o arquivo de roteiro de teste **tests/acceptance/FuncionalCest.php**
+
+6. Alterar o arquivo de roteiro de teste **tests/acceptance/FuncionalCest.php**
 ```
 <?php 
 class FuncionalCest
@@ -93,4 +102,8 @@ class FuncionalCest
     }
 }
 
+```
+7. Executar o teste
+```
+vendor/bin/codecept run --steps
 ```
