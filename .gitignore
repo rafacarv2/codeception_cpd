@@ -1,4 +1,6 @@
-vendor/
+/vendor
+/tests
 /composer.phar
 /composer.json
 /composer.lock
+/codeception.yml

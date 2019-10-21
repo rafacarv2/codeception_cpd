@@ -35,8 +35,6 @@ modules:
 ```
 4. Escrevendo um teste básico 
 * Alterar o arquivo **tests/acceptance/FirstCest.php** inserindo o código abaixo
-
-
 ```
 <?php
 class AceitacaoCest 
@@ -47,10 +45,47 @@ class AceitacaoCest
         $I->see('I\'M ALIVE');  
     }
 }
+
 ```
 5. Executar o teste
 ```
 vendor/bin/codecept run --steps
 ```
+## Testando com Selenium
+1. Baixar o Selenium Server
+```
+https://www.seleniumhq.org/download/
+```
+2. Executar o Selenium Server
+```
+java -jar {Caminho do selenium server}
+```
+3. functional.suite.yml
+```
+# tests/functional.suite.yml
+actor: FunctionalTester
+modules:
+    enabled:
+        - WebDriver:
+            url: http://localhost/codecept/app/
+            browser: chrome
+        - \Helper\Functional
+```
+4. FuncionalCest
+```
+<?php 
+class FuncionalCest
+{
+    public function testeLogin(FunctionalTester $I)
+    {
+        $I->amOnPage('/');
+        $I->see('I\'M ALIVE');
+        $I->fillField('#formNome', 'Rafael');
+        $I->fillField('#formSenha', 'Senha');
+        $I->click('#submit');
+        $I->see('Im Sorry Rafael');
+        $I->wait(3); // wait for 3 secs
+    }
+}
 
-
+```
