@@ -60,7 +60,12 @@ https://www.seleniumhq.org/download/
 ```
 java -jar {Caminho do selenium server}
 ```
-3. functional.suite.yml
+3. Criar um caso de teste
+```
+vendor/bin/codecept generate:cest functional Funcional
+```
+
+4. Alterar a configuração do teste funcional em **functional.suite.yml**
 ```
 # tests/functional.suite.yml
 actor: FunctionalTester
@@ -71,7 +76,7 @@ modules:
             browser: chrome
         - \Helper\Functional
 ```
-4. FuncionalCest
+5. Alterar o arquivo de roteiro de teste **tests/acceptance/FuncionalCest.php**
 ```
 <?php 
 class FuncionalCest
