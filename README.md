@@ -48,6 +48,7 @@ php composer.phar require "codeception/codeception" --dev
 ```
 
 ## Criando o primeiro caso de teste de aceitação
+* **!!IMPORTANTE!!** Certifique-se de que seu servidor local está funcionando
 1. Criar os arquivos de configuração 
 ```
 vendor/bin/codecept bootstrap
@@ -57,7 +58,7 @@ vendor/bin/codecept bootstrap
 vendor/bin/codecept generate:cest acceptance FirstCest
 ```
 3. Configurar o arquivo  **tests/acceptance.suite.yml**
-* Certifique-se de que seu servidor local está funcionando. No exemplo abaixo, é usado o servidor do XAMPP
+
 ```
 # tests/acceptance.suite.yml
 actor: AcceptanceTester
@@ -82,11 +83,12 @@ class FirstCest
 
 ```
 5. Executar o teste
-    1. -   **!!IMPORTANTE!!** Certifique-se de que o servidor apache esteja rodando corretamente antes de executar o comando abaixo. Caso contrário, erros acontecerão
+-   **!!IMPORTANTE!!** Certifique-se de que o servidor apache esteja rodando corretamente antes de executar o comando abaixo. Caso contrário, erros acontecerão
 ```
 vendor/bin/codecept run --steps
 ```
 ## Testando com Selenium
+
 1. Baixar o Selenium Server
 ```
 https://www.seleniumhq.org/download/
@@ -95,7 +97,7 @@ https://www.seleniumhq.org/download/
 ```
 https://chromedriver.chromium.org/downloads
 ```
-O arquivo chromedriver.exe deve estar na mesma pasta onde o Selenium Server está instalado.
+*   Certifique-se de que o **chromedriver.exe** correto e que o **arquivo .jar do seleniumServer** estejam dentro da mesma pasta
 
 3. Executar o Selenium Server
 ```
