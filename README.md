@@ -95,7 +95,8 @@ vendor/bin/codecept run --steps
 
 *   Certifique-se de que o **chromedriver.exe** correto e que o **arquivo .jar do seleniumServer** estejam dentro da mesma pasta
 
-3. Executar o Selenium Server
+3. Em um terminal separado, execute o Selenium Server.
+    * É necessário utilizar outro terminal, pois o selenium server tornará o terminal ocupado por tempo indeterminado
 ```
 java -jar {Caminho do selenium server}
 ```
