@@ -107,7 +107,7 @@ vendor/bin/codecept generate:cest acceptance Acceptance
 
 5. Alterar a configuração do teste funcional em **acceptance.suite.yml**
 ```
-# tests/functional.suite.yml
+# tests/acceptance.suite.yml
 actor: AcceptanceTester
 modules:
     enabled:
