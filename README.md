@@ -54,7 +54,7 @@ vendor/bin/codecept bootstrap
 ```
 2. Criando o caso de teste
 ```
-vendor/bin/codecept generate:cest acceptance Aceitacao
+vendor/bin/codecept generate:cest acceptance FirstCest
 ```
 3. Configurar o arquivo  **tests/acceptance.suite.yml**
 * Certifique-se de que seu servidor local está funcionando. No exemplo abaixo, é usado o servidor do XAMPP
@@ -71,7 +71,7 @@ modules:
 * Alterar o arquivo **tests/acceptance/FirstCest.php** inserindo o código abaixo
 ```
 <?php
-class AceitacaoCest 
+class FirstCest 
 {
     public function frontpageWorks(AcceptanceTester $I)
     {
