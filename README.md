@@ -1,15 +1,45 @@
 # Codeception - Projeto básico
+
+
+## Requisitos do sistema
+1. Servidor Apache 2.0+ e PHP 5.6+
+    1.   Recomendado usar XAMPP para melhores resultados
+    1.   [Download](https://www.apachefriends.org/pt_br/index.html/)
+
+1. git 2+
+    1.   Este tutorial cobre o uso de git via shell
+    1.   [Download](https://git-scm.com/)
+1. Composer 1.3+
+    1. Caso já tenha o php instalado corretamente, siga o tutorial abaixo para baixar o composer mais recente
+    ```
+    php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+    php -r "if (hash_file('sha384', 'composer-setup.php') === 'a5c698ffe4b8e849a443b120cd5ba38043260d5c4023dbf93e1558871f1f07f58274fc6f4c93bcfd858c6bd0775cd8d1') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
+    php composer-setup.php
+    php -r "unlink('composer-setup.php');"
+    ```
+1. Java 
+    1. Necessário para rodar o selenium server para testes de aceitação
+    1. [Download](https://www.java.com/pt_BR/download/)
+
+1. Selenium Server
+    1. Servidor que permite a instância de um navegador e testes automatizados neste navegador
+    1. [Download](https://www.seleniumhq.org/download/)
+    
+
+1.  ChromeDriver
+    1. WebDriver para o Google Chrome (Faça apenas o download da mesma versão do seu Chrome)
+    1. [Download](https://chromedriver.chromium.org/downloads)
+    
+     
 ## Instalando o codeception
-1. Clonar este projeto onde seu servidor está instalado (exemplo para execução local: pasta "htdocs" no Xampp)
+1. Clonar este projeto onde seu servidor está instalado
+
+**!!IMPORTANTE!!** Execute o comando abaixo dentro da pasta htdocs do XAMPP **%xampp/htdocs**
 ```
 git clone https://github.com/rafacarv2/codeception_cpd.git
 ```
 2. Acessar a pasta do projeto
 
-3. Baixar a versão mais recente do Composer
-```
-https://getcomposer.org/download/
-```
 4. Instalar o codeception mais recente
 ```
 php composer.phar require "codeception/codeception" --dev
