@@ -34,7 +34,7 @@
 ## Instalando o codeception
 1. Clonar este projeto onde seu servidor está instalado
 
-**!!IMPORTANTE!!** Execute o comando abaixo dentro da pasta htdocs do XAMPP **%xampp/htdocs**
+-   **!!IMPORTANTE!!** Execute o comando abaixo dentro da pasta htdocs do XAMPP **%xampp/htdocs**
 ```
 git clone https://github.com/rafacarv2/codeception_cpd.git
 ```
