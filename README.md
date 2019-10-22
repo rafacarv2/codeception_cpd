@@ -139,3 +139,39 @@ class AcceptanceCest
 ```
 vendor/bin/codecept run --steps
 ```
+
+
+## Testando BDD com Gherkin e Selenium
+1.  Cria o arquivo de features
+
+```
+vendor/bin/codecept g:feature acceptance Login
+```
+
+   1.   Exemplo de um arquivo de features para o sistema
+        * codeception_cpd/tests/acceptance/Login.feature
+```
+# language: pt
+Funcionalidade: Fazer Login
+  A fim de ver a página de saudação
+  Como usuário do sistema
+  Eu preciso fazer Login
+
+Cenário: Uma determinada situação de negócios
+    Dado que estou em "/"
+    E eu preencho "#formNome" com "Rafael"
+    E eu preencho "#formSenha" com "Senha"
+    Quando eu Clicar "#submit"
+    Entao eu vejo a mensagem "Im Sorry Rafael"
+```
+
+1.  Cria o arquivo dos passos a ser dados (onde ficarão os metodos da feature)
+```
+vendor/bin/codecept generate:stepobject functional LoginSteps
+```
+
+1.  Imprime os snippets gerados pelo arquivo de features
+    * Os códigos gerados abaixo servem de esqueleto para a classe de teste que será criada mais a frente
+```
+vendor/bin/codecept  g:snippets acceptance
+```
