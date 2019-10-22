@@ -156,11 +156,11 @@ Funcionalidade: Fazer Login
   Como usuário do sistema
   Eu preciso fazer Login
 
-Cenário: Uma determinada situação de negócios
+Cenário: Realizar login 
     Dado que estou em "/"
     E eu preencho "#formNome" com "Rafael"
     E eu preencho "#formSenha" com "Senha"
-    Quando eu Clicar "#submit"
+    Quando eu clico em "#submit"
     Entao eu vejo a mensagem "Im Sorry Rafael"
 ```
 
@@ -217,6 +217,7 @@ class LoginStep extends \AcceptanceTester
     }
 }
 
+
 ```
 4. Editar o arquivo codeception.yml
 ```
@@ -237,6 +238,8 @@ gherkin:
             - FunctionalTester
             - AdditionalSteps    
             - Step\Acceptance\LoginStep
+ 
+
  ```
 5. Executar o os testes
 ```
