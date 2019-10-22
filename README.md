@@ -112,7 +112,7 @@ actor: AcceptanceTester
 modules:
     enabled:
         - WebDriver:
-            url: http://localhost/codecept/app/
+            url: http://localhost/codeception_cpd/app/
             browser: chrome
         - \Helper\Acceptance
 ```
