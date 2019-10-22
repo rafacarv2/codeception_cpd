@@ -182,7 +182,7 @@ vendor/bin/codecept  g:snippets acceptance
 
 namespace Step\Acceptance;
 
-class LoginStep extends \AcceptanceTester
+class LoginSteps extends \AcceptanceTester
 {
     /**
      * @Given que estou em :arg1
@@ -237,7 +237,7 @@ gherkin:
             - AcceptanceTester
             - FunctionalTester
             - AdditionalSteps    
-            - Step\Acceptance\LoginStep
+            - Step\Acceptance\LoginSteps
  
 
  ```
