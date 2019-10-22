@@ -102,27 +102,27 @@ java -jar {Caminho do selenium server}
 ```
 4. Criar um caso de teste
 ```
-vendor/bin/codecept generate:cest functional Funcional
+vendor/bin/codecept generate:cest acceptance Acceptance
 ```
 
-5. Alterar a configuração do teste funcional em **functional.suite.yml**
+5. Alterar a configuração do teste funcional em **acceptance.suite.yml**
 ```
 # tests/functional.suite.yml
-actor: FunctionalTester
+actor: AcceptanceTester
 modules:
     enabled:
         - WebDriver:
             url: http://localhost/codecept/app/
             browser: chrome
-        - \Helper\Functional
+        - \Helper\Acceptance
 ```
 
-6. Alterar o arquivo de roteiro de teste **tests/acceptance/FuncionalCest.php**
+6. Alterar o arquivo de roteiro de teste **tests/acceptance/AcceptanceCest.php**
 ```
 <?php 
-class FuncionalCest
+class AcceptanceCest
 {
-    public function testeLogin(FunctionalTester $I)
+    public function testeLogin(AcceptanceTester $I)
     {
         $I->amOnPage('/');
         $I->see('I\'M ALIVE');
