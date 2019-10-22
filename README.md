@@ -82,6 +82,7 @@ class FirstCest
 
 ```
 5. Executar o teste
+    1. -   **!!IMPORTANTE!!** Certifique-se de que o servidor apache esteja rodando corretamente antes de executar o comando abaixo. Caso contrário, erros acontecerão
 ```
 vendor/bin/codecept run --steps
 ```
