@@ -144,11 +144,11 @@ vendor/bin/codecept run --steps
 ## Testando BDD com Gherkin e Selenium
 
 
-1. Cria o arquivo de features
+1.  Cria o arquivo de features
 ```
 vendor/bin/codecept g:feature acceptance Login
 ```
-
+   * Preencher o arquivo **test/acceptance/Login.features** criado agora com o conteúdo abaixo
 ```
 # language: pt
 Funcionalidade: Fazer Login
@@ -165,14 +165,56 @@ Cenário: Uma determinada situação de negócios
 ```
 
 
-3. Cria o arquivo dos passos a ser dados (onde ficarão os metodos da feature)
+2.  Cria o arquivo dos passos a ser dados (onde ficarão os metodos da feature)
 ```
 vendor/bin/codecept generate:stepobject functional LoginSteps
 ```
 
 
-4.  Imprime os snippets gerados pelo arquivo de features
-    * Os códigos gerados abaixo servem de esqueleto para a classe de teste que será criada mais a frente
+3.  Imprime os snippets gerados pelo arquivo de features
+* Os códigos gerados abaixo servem de esqueleto para a classe gerada no item acima (**tests/_support/Step/Acceptance/LoginSteps.php**)
 ```
 vendor/bin/codecept  g:snippets acceptance
+```
+*  Para facilitar, copie o código abaixo no arquivo **LoginSteps.php**
+```
+<?php
+
+namespace Step\Acceptance;
+
+class LoginStep extends \AcceptanceTester
+{
+    /**
+     * @Given que estou em :arg1
+     */
+    public function queEstouEm($arg1)
+    {
+        $this->amOnPage($arg1); 
+    }
+
+    /**
+     * @Given eu preencho :arg1 com :arg2
+     */
+    public function euPreenchoCom($arg1, $arg2)
+    {
+        $this->fillField($arg1, $arg2);
+    }
+
+    /**
+     * @When eu clico em :arg1
+     */
+    public function euClicoEm($arg1)
+    {
+        $this->click($arg1);
+    }
+
+    /**
+     * @Then eu vejo a mensagem :arg1
+     */
+    public function euVejoAMensagem($arg1)
+    {
+        $this->see('Im Sorry Rafael');
+    }
+}
+
 ```
