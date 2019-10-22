@@ -167,7 +167,7 @@ Cenário: Realizar login
 
 2.  Cria o arquivo dos passos a ser dados (onde ficarão os metodos da feature)
 ```
-vendor/bin/codecept generate:stepobject functional LoginSteps
+vendor/bin/codecept generate:stepobject acceptance LoginSteps
 ```
 
 
