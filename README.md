@@ -218,3 +218,27 @@ class LoginStep extends \AcceptanceTester
 }
 
 ```
+4. Editar o arquivo codeception.yml
+```
+paths:
+    tests: tests
+    output: tests/_output
+    data: tests/_data
+    support: tests/_support
+    envs: tests/_envs
+actor_suffix: Tester
+extensions:
+    enabled:
+        - Codeception\Extension\RunFailed
+gherkin:
+    contexts:
+        default:
+            - AcceptanceTester
+            - FunctionalTester
+            - AdditionalSteps    
+            - Step\Acceptance\LoginStep
+ ```
+5. Executar o os testes
+```
+vendor/bin/codecept run --steps -v
+```
