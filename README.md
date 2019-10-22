@@ -89,14 +89,10 @@ vendor/bin/codecept run --steps
 ```
 ## Testando com Selenium
 
-1. Baixar o Selenium Server
-```
-https://www.seleniumhq.org/download/
-```
-2. Baixar o Chrome Driver
-```
-https://chromedriver.chromium.org/downloads
-```
+1. Baixar o Selenium Server - [Download](https://www.seleniumhq.org/download/)
+
+2. Baixar o Chrome Driver - [Download](https://chromedriver.chromium.org/downloads)
+
 *   Certifique-se de que o **chromedriver.exe** correto e que o **arquivo .jar do seleniumServer** estejam dentro da mesma pasta
 
 3. Executar o Selenium Server
