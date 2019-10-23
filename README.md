@@ -213,7 +213,7 @@ class LoginSteps extends \AcceptanceTester
      */
     public function euVejoAMensagem($arg1)
     {
-        $this->see('Im Sorry Rafael');
+        $this->see($arg1);
     }
 }
 
